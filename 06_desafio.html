@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="06_desafio_css.css">
+</head>
+<body>
+
+<main>
+
+<h1>Calculadora</h1>
+
+<input id="primeiro-numero" type="number" placeholder="Coloque o primeiro valor">
+<button onclick="calculadoraSoma()">+</button>
+<button onclick="calculadoraSubtracao()">-</button>
+<button onclick="calculadoraMultiplicacao()">*</button>
+<button onclick="calculadoraDivisao()">/</button>
+<input id="segundo-numero" type="number" placeholder="Coloque o segundo valor">
+<button id="limpar-button" type="reset" onclick="limparCampos()">Limpar</button>
+</main>
+
+<script>
+
+function calculadoraSoma() {
+    
+    const primeiroNumero = Number(document.getElementById('primeiro-numero').value);
+    const segundoNumero = Number(document.getElementById('segundo-numero').value);
+
+    alert("Resultado = " + (primeiroNumero + segundoNumero));
+
+}
+
+
+function calculadoraSubtracao() {
+    
+    const primeiroNumero = Number(document.getElementById('primeiro-numero').value);
+    const segundoNumero = Number(document.getElementById('segundo-numero').value);
+
+    alert("Resultado = " + (primeiroNumero - segundoNumero));
+
+}
+
+function calculadoraMultiplicacao() {
+    
+    const primeiroNumero = Number(document.getElementById('primeiro-numero').value);
+    const segundoNumero = Number(document.getElementById('segundo-numero').value);
+
+    alert("Resultado = " + (primeiroNumero * segundoNumero));
+
+}
+
+function calculadoraDivisao() {
+    
+    const primeiroNumero = Number(document.getElementById('primeiro-numero').value);
+    const segundoNumero = Number(document.getElementById('segundo-numero').value);
+
+    alert("Resultado = " + (primeiroNumero / segundoNumero));
+
+}
+
+
+function limparCampos() {
+
+    document.getElementById('primeiro-numero').value = '';
+    document.getElementById('segundo-numero').value = '';
+
+}
+
+</script>
+
+</body>
+</html>
